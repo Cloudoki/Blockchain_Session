@@ -153,22 +153,30 @@ export class APIService {
     return new Promise((resolve, reject) => {
       this.http.post(endpoint, JSON.stringify(req), options).map(res => res.json()).subscribe(
         data => {
+          resolve(data);
+      });
+
+    });
+  }
+  
+  postQuestion(profile, question) {
+    
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({headers: headers});
+
+    var req = {message: question}
+    var endpoint = this.urlFormat("/profiles/" + profile.id);
+
+    return new Promise((resolve, reject) => {
+      this.http.put(endpoint, JSON.stringify(req), options).map(res => res.json()).subscribe(
+        data => {
 
           this.blocks.push(data);
           resolve(data);
       });
 
     });
-
-    // var response = this.http.post(endpoint, JSON.stringify(req), options).map(res => res.json());
-
-    // response.subscribe(
-    //   data => {
-    //       callback(data);
-    //   }
-    // );
-
-    // return response;
   }
 
   postTransactionConfirm(id, payload, callback) {

@@ -27,7 +27,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Open List', component: ProfilesPage },
-      { title: 'Mine', component: MinePage },
+      { title: 'Post Question', component: MinePage },
       { title: 'Feedback', component: BlocksPage },
       { title: 'Settings', component: SettingsPage }
     ];
