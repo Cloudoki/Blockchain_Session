@@ -1,0 +1,51 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding class="home">
+
+  <ion-row>
+    <ion-col col-4 col-sm-4 class="list profile-list">
+        <h1>PROFILES</h1>
+        <br><br>
+      <div *ngFor="let profile of profiles">
+        <div class="profile">
+          <div class="profile-avatar">
+            <ion-icon name="ios-person-outline" class="block-icon"></ion-icon>
+          </div>
+          <div class="profile-name">{{profile.name}}</div>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col col-8 col-sm-8 class="list block-list">
+      <h1>BLOCKS</h1>
+      <br><br>
+      <div *ngFor="let block of blocks">
+        <div class="block">
+          <div class="data-block">
+            <span>DATA</span>
+            <span>{{block.dataParsed.message}}</span>
+          </div>
+          <div class="block-label">PREVIOUS HASH</div>
+          <div class="block-content">
+            <span>{{block.previous_hash}}</span>
+          </div>
+          <div class="block-label">HASH</div>
+          <div class="block-content">
+            <span>{{block.hash}}</span>
+          </div>
+          <div class="block-id">
+            <span>{{block.id - 1}}</span>
+          </div>
+        </div>
+        <ion-icon name="ios-arrow-up" class="block-icon"></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

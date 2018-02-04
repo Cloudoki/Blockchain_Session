@@ -1,0 +1,135 @@
+page-home {
+  .home {
+    // background: url(../assets/imgs/home.png) no-repeat;
+    background-size: contain;
+    background-position: center top;
+    background: #f9f9fb;
+    color: #444;
+  }
+
+  .list {
+    text-align: center;
+
+    .block {
+      position: relative;
+      background: #fff;
+      box-shadow: 0 1px 1px 0 rgba(10,16,34,.2)!important;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 27px;
+      border-radius: 10px;
+      padding: 34px;
+      text-align: left;
+      max-width: 595px;
+
+      .data-block {
+        height: 60px;
+        span {
+          float: left;
+          padding: 5px 15px;
+
+          &:first-child {
+            position: absolute;
+            border-right: 1px solid #d9d9d9;
+          }
+          &:last-child {
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            width: 100%;
+            padding-left: 80px;
+            color: #999;
+          }
+        }
+      }
+
+      .block-label, .block-content {
+        font-size: .8em;
+        margin-bottom: 15px;
+      }
+      .block-label {
+        position: absolute;
+      }
+      .block-content {
+        padding-left: 100px;
+        color: rgba(82, 196, 26, 1);
+        span {
+          border: 1px solid #b7eb8f;
+          padding: 2px 4px;
+          border-radius: 4px;
+          background: #f6ffed;
+          font-size: 1.1em;
+        }
+      }
+
+      .block-id {
+        text-align: right;
+        span {
+          line-height: 20px;
+          height: 22px;
+          padding: 0 7px;
+          border-radius: 4px;
+          border: 1px solid #d9d9d9;
+          background: #fafafa;
+          display: inline-block;
+          font-size: .8em;
+        }
+      }
+    }
+
+    .block-icon {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      .profile-avatar {
+        color: #108ee9;
+        background-color: #d2eafb;
+        -webkit-animation: bluePulse 1.5s infinite;
+        animation: bluePulse 1.5s infinite;
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 6.5em;
+      }
+      .profile-name {
+        color: #1890ff;
+        margin: 15px 0 40px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 2.8em;
+    color: #ccc;
+    text-shadow: 0 3px 0 rgba(0,0,0,.5);
+
+    strong {
+      color: #ddd;
+    }
+  }
+
+  .profile-title {
+    font-size: .8em;
+    color: white;
+    small { color: #999; }
+  }
+
+  .funds {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 200;
+    color: white;
+  }
+
+  ion-icon {
+    padding-top: 10px;
+  }
+
+  .center { text-align: center; }
+}
