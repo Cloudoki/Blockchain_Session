@@ -11,14 +11,26 @@ type profilesType = Array<{id: number, email: string, name: string, password: st
 })
 export class ProfilesPage {
   public profiles: profilesType;
+  public polling
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public api: APIService) {
 
     this.profiles = this.api.profiles;
 
+    this.getProfiles()
+    this.polling = setInterval(() => {
+      this.getProfiles()
+    }, 5000)
+  }
+
+  getProfiles() {
     this.api.getProfiles().then((response: profilesType) => {
       this.profiles = response;
     });
+  }
+
+  ionViewDidLeave() {
+    clearInterval(this.polling)
   }
 
   itemSelected(profile) {
