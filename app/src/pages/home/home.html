@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+
+  <br>
+  <h3>TEX Event<br><strong>Thelmies</strong></h3>
+  <br>
+
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title class="profile-title">
+      <small>PROFILE</small><br>
+      {{ profile.name }}
+      </ion-card-title>
+      <p class="funds">{{ profile.thelmies }}</p>
+      <p class="center">Thelmies</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>Previous blocks</ion-list-header>
+    <span *ngFor="let item of blocks; let i=index">
+
+        <button ion-item (click)="itemSelected(item)" icon-start *ngIf="i >= blocks.length - 2">
+          <ion-avatar item-start>
+            <ion-icon name="cube"></ion-icon>
+          </ion-avatar>
+          <h2>{{ item.hash }}</h2>
+          <p>{{ item.dataParsed.message }}</p>
+          
+        </button>
+
+    </span>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feedback blocks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of blocks" (click)="itemSelected(item)" icon-start>
+      <ion-icon name="cube"></ion-icon>
+      {{ item.hash }}
+      <ion-note item-end class="small">{{ item.dataParsed.message }}</ion-note>
+    </button>
+  </ion-list>
+
+</ion-content>

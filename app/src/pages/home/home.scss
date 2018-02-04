@@ -1,0 +1,39 @@
+page-home {
+  .home {
+    background: url(../assets/imgs/home.png) no-repeat;
+    background-size: contain;
+    background-position: center top;
+  }
+
+
+  h3 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 2.8em;
+    color: #ccc;
+    text-shadow: 0 3px 0 rgba(0,0,0,.5);
+
+    strong {
+      color: #ddd;
+    }
+  }
+
+  .profile-title {
+    font-size: .8em;
+    color: white;
+    small { color: #999; }
+  }
+
+  .funds {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 200;
+    color: white;
+  }
+
+  ion-icon {
+    padding-top: 10px;
+  }
+
+  .center { text-align: center; }
+}

@@ -1,0 +1,103 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><strong>TEX</strong> Authorise</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="page-authorise">
+
+  <ion-slides pager>
+    <ion-slide>
+    <h3><strong>TEX</strong> Thelmies</h3>
+    <br><br>
+    <p>Welcome to the TEX event. This demo app is an adaptation of Thelmie on <strong>Block chain technology</strong>.</p>
+    <p>
+      <small>
+        We've added a technical layer to the app, so you can follow what happens behind the screens.
+      </small>
+    </p>
+    <div padding>
+      <button ion-button color="dark" menuToggle>Skip</button>
+      <button ion-button color="primary" (click)="slides.slideNext()">Next</button>
+    </div>
+    </ion-slide>
+
+    <ion-slide>
+    <h2>Connect to the<br><strong>Blockchain source</strong></h2>
+    <p>Where does the Blockchain source live?</p>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">BC domain:</ion-label>
+        <ion-input placeholder="Anywhere" [(ngModel)]="url" (change)=storeUrl(url) ></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-fab center>
+      <button ion-fab color="primary" (click)="gotoNextSlide()">
+        <ion-icon name="md-log-in"></ion-icon>
+      </button>
+    </ion-fab>
+    </ion-slide>
+
+    <ion-slide class="toUser">
+      <h2>Create a profile</h2>
+      <small>
+        You will be using your profile for <strong>peer actions</strong>.<br> And of course feedback.
+        <br> <br>
+      </small>
+      <ion-list>
+        <ion-item>
+          <ion-label color="primary">Name:</ion-label>
+          <ion-input placeholder="Jane Doe"[(ngModel)]="profile.name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary">E-mail:</ion-label>
+          <ion-input placeholder="jane@texevent.be" [(ngModel)]="profile.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary">Password:</ion-label>
+          <ion-input placeholder="Use a phrase!" [(ngModel)]="profile.password"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <div padding>
+        <button ion-button color="primary" block (click)="addProfile()">Create profile</button>
+        <button ion-button color="dark" block (click)="login()">Log in</button>
+      </div>
+    </ion-slide>
+
+
+    <!--
+
+    <ion-slide>
+    <h2 class="slide-title">Login!</h2>
+    <ion-list>
+
+    <ion-item>
+    <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    </ion-list>
+
+    <div padding>
+    <button ion-button color="primary" block (click)="gotoNextSlide2()">Log In</button>
+    </div>
+    </ion-slide>
+
+    <ion-slide>
+
+    <h2 class="slide-title">Ready to Start?</h2>
+    <p> Congratulations your Talk Domo is all set up.
+    <button ion-button large clear icon-end color="primary" (click)="appBegin()">
+    Continue
+    <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-slide>-->
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ profile.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <span *ngIf="profile.message">
+    <ion-card>
+      <ion-card-content>
+
+          <ion-card-title class="title">
+            <ion-icon ios="ios-contact-outline" md="ios-contact-outline"></ion-icon> {{profile.name}}
+          </ion-card-title>
+
+          <p class="message">{{ profile.message }}</p>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+          <ion-textarea [(ngModel)]="response" placeholder="Answer"></ion-textarea>
+      </ion-card-content>
+    </ion-card>
+
+    <button ion-button secondary (click)="mine(profile)">Answer</button>
+  </span>
+
+  <span *ngIf="!profile.message">
+    <ion-card>
+      <ion-card-content>
+
+          <ion-card-title class="title">
+            <ion-icon ios="ios-contact-outline" md="ios-contact-outline"></ion-icon> {{profile.name}}
+          </ion-card-title>
+
+          <p class="message">{{ profile.thelmies }} Thelmies</p>
+
+      </ion-card-content>
+    </ion-card>
+
+  </span>
+
+
+
+  <!-- <ion-list>
+    <ion-list-header>Recent transaction</ion-list-header>
+    <span *ngFor="let record of transactions">
+      <button ion-item (click)="itemSelected(record)" icon-start>
+        <ion-avatar item-start>
+          <ion-icon ios="ios-cash-outline" md="ios-cash-outline"></ion-icon>
+        </ion-avatar>
+        <h2>{{ record.title }}</h2>
+        <ion-note item-end>{{ record.text }}</ion-note>
+      </button>
+    </span>
+  </ion-list> -->
+
+</ion-content>

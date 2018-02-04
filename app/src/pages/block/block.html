@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Thelmie Block #{{ block.id - 1 }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-list>
+      <ion-item>
+          <div class="title">Message</div>
+          {{ block.dataParsed.message }}
+      </ion-item>
+      <ion-item *ngIf="block.dataParsed.feedback">
+          <div class="title">Feedback</div>
+          {{ block.dataParsed.miner }}: "{{ block.dataParsed.feedback }}"
+      </ion-item>
+      <ion-item>
+          <div class="title">Hash</div>
+          {{ block.hash }}
+      </ion-item>
+      <ion-item>
+          <div class="title">Previous Hash</div>
+          {{ block.previous_hash }}
+      </ion-item>
+
+      <ion-item>
+          <div class="title">Created</div>
+          {{ block.creation_date }}
+      </ion-item>
+      <ion-item>
+          <div class="title">Nonce</div>
+          {{ block.nonce }}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <br>
+  <small>DATA JSON</small>
+  <p class="json">
+    {{ block.data }}
+  </p>
+
+</ion-content>

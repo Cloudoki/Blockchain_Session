@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profiles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+      <button ion-item *ngFor="let item of profiles" (click)="itemSelected(item)" icon-start>
+        <ion-avatar item-start  *ngIf="item.message">
+          <ion-icon name="heart"></ion-icon>
+        </ion-avatar>
+        <ion-avatar item-start  *ngIf="!item.message">
+          <ion-icon ios="ios-contact-outline" md="ios-contact-outline" isActive="false"></ion-icon>
+        </ion-avatar>
+        <h3>{{ item.message }}</h3>
+        <p>{{ item.name }}</p>
+      </button>
+
+  </ion-list>
+
+</ion-content>

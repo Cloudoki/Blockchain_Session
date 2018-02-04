@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Access Token</ion-label>
+    <ion-input type="text" value="23orjf3498hg3140-29fj123142fjh34oifuh"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+      Your Profile
+      </ion-card-title>
+
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input>{{ api.profile.name }}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>E-mail</ion-label>
+        <ion-input disabled>{{ api.profile.email }}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>IBAN</ion-label>
+        <ion-input disabled>{{ api.profile.iban }}</ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

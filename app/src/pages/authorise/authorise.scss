@@ -1,0 +1,17 @@
+.page-authorise {
+  background: url(../assets/imgs/home.png) no-repeat;
+  background-size: contain;
+  background-position: center top;
+
+  h3 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 2em;
+    color: #ccc;
+    text-shadow: 0 3px 0 rgba(0,0,0,.5);
+
+    strong {
+      color: #ded;
+    }
+  }
+}

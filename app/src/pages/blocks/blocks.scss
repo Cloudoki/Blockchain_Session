@@ -1,0 +1,16 @@
+page-blocks {
+  .small {
+    font-size: .8em;
+    color: #777;
+    max-width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  ion-list ion-icon {
+    position: relative;
+    top: 3px;
+    color: #7A7;
+  }
+}
