@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MinePage } from '../mine/mine';
-import { BlockPage } from '../block/block';
 import { APIService } from '../../providers/rest/api-service';
 
 type profileType = {id: number, email: string, name: string, password: string, thelmies: number, message: string}

@@ -12,9 +12,8 @@ export class APIService {
   APIurl = '';
   Oauthurl = 'https://tex-oauth.eu-gb.mybluemix.net/';
 
-  //public profile = {id: 0, name: "", email: "", password: "", thelmies: 100};
   public blocks = [];
-  public profile: profileType;
+  public profile = {id: 0, name: "", email: "", password: "", thelmies: "", message: ""}
   public profiles: profilesType;
 
   constructor(private http:Http, public toastCtrl: ToastController) {
@@ -169,7 +168,7 @@ export class APIService {
     //   }
     // );
 
-    return response;
+    // return response;
   }
 
   postTransactionConfirm(id, payload, callback) {

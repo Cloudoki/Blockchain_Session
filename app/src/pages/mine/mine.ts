@@ -3,8 +3,8 @@ import { IonicPage, ViewController, Platform, ModalController, NavController, Na
 import { BlockPage } from '../block/block';
 import { APIService } from '../../providers/rest/api-service';
 
-type profileType = {id: number, email: string, name: string, password: string, thelmies: number}
-type blockType = {id: number, creation_date:string, data: string, hash: string, miner_id: number, nonce: number, previous_hash: string}
+type profileType = {id: number, email: string, name: string, password: string, thelmies: number, message: string}
+type blockType = {id: number, creation_date:string, data: string, hash: string, miner_id: number, nonce: number, previous_hash: string, dataParsed: object}
 type blocksType = Array<{id: number, creation_date:string, data: string, hash: string, miner_id: number, nonce: number, previous_hash: string}>
 
 @IonicPage()
