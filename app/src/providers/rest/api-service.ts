@@ -13,7 +13,7 @@ export class APIService {
   Oauthurl = 'https://tex-oauth.eu-gb.mybluemix.net/';
 
   public blocks = [];
-  public profile = {id: 0, name: "", email: "", password: "", thelmies: "", message: ""}
+  public profile = {id: 0, name: "", email: "", password: "", thelmies: 100, message: ""}
   public profiles: profilesType;
 
   constructor(private http:Http, public toastCtrl: ToastController) {

@@ -8,7 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ProfilesPage } from '../pages/profiles/profiles';
 import { BlocksPage } from '../pages/blocks/blocks';
 import { SettingsPage } from '../pages/settings/settings';
-import { MinePage } from '../pages/mine/mine';
+import { ReplyPage } from '../pages/reply/reply';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +27,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Open List', component: ProfilesPage },
-      { title: 'Post Question', component: MinePage },
+      { title: 'Post Question', component: ReplyPage },
       { title: 'Feedback', component: BlocksPage },
       { title: 'Settings', component: SettingsPage }
     ];

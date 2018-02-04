@@ -3,17 +3,38 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Post a question</ion-title>
+    <ion-title><strong>TEX</strong> Miner</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+  <ion-list>
+    <ion-item>
+      <strong>Latest block:</strong>
+      <span>{{ latest_block }}</span>
+    </ion-item>
+    <ion-item>
+      <strong>Feedback for:</strong> {{ profile.name }}
+    </ion-item>
+    <ion-item>
+      <strong>Reward:</strong> 5 thelmies
+    </ion-item>
+  </ion-list>
+
   <ion-card>
+    <ion-card-header><ion-icon name="cube"></ion-icon> Proof of Work</ion-card-header>
     <ion-card-content>
-      <ion-textarea [(ngModel)]="question" placeholder="Post your question"></ion-textarea>
+
+      <ion-item class="pay">
+       Nonce {{ nonce }}
+      </ion-item>
+      <small>Number of hashing attempts</small>
+
     </ion-card-content>
   </ion-card>
-  <button ion-button secondary (click)="postQuestion()" style="margin-left: 13px;">Post</button>
+
+
+
 
 </ion-content>

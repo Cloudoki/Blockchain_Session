@@ -13,6 +13,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { SettingsPage } from '../pages/settings/settings';
 import { MinePage, ModalContentPage } from '../pages/mine/mine';
 import { BlockPage } from '../pages/block/block';
+import { ReplyPage } from '../pages/reply/reply';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilesPage,
     ProfilePage,
     BlocksPage,
+    ReplyPage,
     SettingsPage,
     MinePage,
     BlockPage,
@@ -43,6 +45,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilesPage,
     ProfilePage,
     BlocksPage,
+    ReplyPage,
     SettingsPage,
     MinePage,
     BlockPage,

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Post a question</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-textarea [(ngModel)]="question" placeholder="Post your question"></ion-textarea>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button secondary (click)="postQuestion()" style="margin-left: 13px;">Post</button>
+
+</ion-content>
