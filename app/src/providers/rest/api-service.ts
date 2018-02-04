@@ -3,7 +3,6 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import { ToastController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
-type profileType = {id: number, email: string, name: string, password: string, thelmies: number, message: string}
 type profilesType = Array<{id: number, email: string, name: string, password: string, thelmies: number, message: string}>
 
 @Injectable()

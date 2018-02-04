@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, Platform, ModalController, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams, ToastController } from 'ionic-angular';
 import { APIService } from '../../providers/rest/api-service';
 
 type profileType = {id: number, email: string, name: string, password: string, thelmies: number, message: string}
