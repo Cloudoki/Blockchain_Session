@@ -21,7 +21,7 @@ export class HomePage {
     this.polling = setInterval(() => {
       this.getProfiles()
       this.getBlocks()
-    }, 100000000)
+    }, 10000)
   }
 
   getProfiles() {
