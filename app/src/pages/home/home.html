@@ -29,13 +29,13 @@
     <ion-list-header>Previous blocks</ion-list-header>
     <span *ngFor="let item of blocks; let i=index">
 
-        <button ion-item (click)="itemSelected(item)" icon-start *ngIf="i >= blocks.length - 2">
+        <button ion-item (click)="itemSelected(item)" icon-start *ngIf="i <= 2">
           <ion-avatar item-start>
             <ion-icon name="cube"></ion-icon>
           </ion-avatar>
           <h2>{{ item.hash }}</h2>
           <p>{{ item.dataParsed.message }}</p>
-          
+
         </button>
 
     </span>

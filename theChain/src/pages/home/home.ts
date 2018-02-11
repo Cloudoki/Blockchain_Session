@@ -13,7 +13,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public api: APIService) {
 
-    localStorage.setItem('apiurl', 'localhost:5001')
+    localStorage.setItem('apiurl', '192.168.0.101:5001')
 
     this.getProfiles()
     this.getBlocks()

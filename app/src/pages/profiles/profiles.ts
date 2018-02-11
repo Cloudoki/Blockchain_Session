@@ -20,7 +20,7 @@ export class ProfilesPage {
     this.getProfiles()
     this.polling = setInterval(() => {
       this.getProfiles()
-    }, 5000)
+    }, 30000)
   }
 
   getProfiles() {

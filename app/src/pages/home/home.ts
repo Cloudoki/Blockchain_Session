@@ -19,6 +19,7 @@ export class HomePage {
     this.profile = this.api.profile;
     this.blocks = this.api.blocks;
 
+
     this.api.me().then((response: profileType) => {
       this.profile = response;
     });

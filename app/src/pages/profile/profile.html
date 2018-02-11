@@ -29,7 +29,8 @@
       </ion-card-content>
     </ion-card>
 
-    <button ion-button secondary (click)="mine(profile)">Answer</button>
+    <button ion-button secondary (click)="mine(profile)" *ngIf="!same">Answer</button>
+    <button ion-button color="dark" *ngIf="same">Can't answer yourself</button>
   </span>
 
   <span *ngIf="!profile.message">

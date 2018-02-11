@@ -13,11 +13,14 @@ type profileType = {id: number, email: string, name: string, password: string, t
 export class ProfilePage {
   public profile: profileType;
   public response;
+  public same;
   // public transactions; //: Array<{title: string, text: string, iban: string, profile: Array<{title: string, text: string, iban: string}>}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public api: APIService)
   {
     this.profile = this.navParams.get("profile");
+
+    this.same = this.profile.id == this.api.profile.id
 
     // this.api.getTransactions(this.profile.account_id, function (list)
     // {
